@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { githubOrgUrl } from "@/lib/site-config";
+import { githubOrgUrl, withBasePath } from "@/lib/site-config";
 
 const navItems = [
   { href: "/", key: "home" as const },
@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3">
         <div>
           <Image
-            src="/images/bento-logo.png"
+            src={withBasePath("/images/bento-logo.png")}
             alt="Bento Platform"
             width={595}
             height={147}

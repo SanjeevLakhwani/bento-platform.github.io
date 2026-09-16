@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/metadata";
-import { githubOrgUrl, siteUrl } from "@/lib/site-config";
+import { githubOrgUrl, siteUrl, withBasePath } from "@/lib/site-config";
 import QuickLinkCard from "@/components/QuickLinkCard";
 
 export function generateStaticParams() {
@@ -52,7 +52,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <section className="border-b border-border-soft bg-brand-soft/40">
         <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-20 text-center sm:px-6">
           <Image
-            src="/images/bento-logo.png"
+            src={withBasePath("/images/bento-logo.png")}
             alt="Bento Platform"
             width={595}
             height={147}

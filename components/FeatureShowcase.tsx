@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { FeatureItem } from "@/content/types";
+import { withBasePath } from "@/lib/site-config";
 
 const IMAGE_DIMENSIONS: Record<string, { width: number; height: number }> = {
   "/images/bento_public1.png": { width: 1774, height: 988 },
@@ -19,7 +20,7 @@ export default function FeatureShowcase({ feature, index }: { feature: FeatureIt
     >
       <div className="w-full overflow-hidden rounded-2xl border border-border-soft bg-white shadow-sm lg:w-3/5">
         <Image
-          src={feature.image}
+          src={withBasePath(feature.image)}
           alt={feature.alt}
           width={dims.width}
           height={dims.height}
