@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { siteName, siteUrl } from "@/lib/site-config";
+import { siteName, siteUrl, withBasePath } from "@/lib/site-config";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     template: `%s — ${siteName}`,
   },
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: withBasePath("/icon.png"),
+    apple: withBasePath("/apple-icon.png"),
   },
 };
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { githubOrgUrl } from "@/lib/site-config";
+import { githubOrgUrl, withBasePath } from "@/lib/site-config";
 
 const navItems = [
   { href: "/", key: "home" as const },
@@ -28,7 +28,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <Image
-            src="/images/bento-logo.png"
+            src={withBasePath("/images/bento-logo.png")}
             alt="Bento Platform"
             width={595}
             height={147}
