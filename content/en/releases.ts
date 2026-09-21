@@ -2,8 +2,28 @@ import type { ReleaseVersion } from "../types";
 
 const releases: ReleaseVersion[] = [
   {
+    version: 26,
+    status: "current",
+    date: "2026-09-01",
+    majorMilestones: [
+      "Better chart layout logic and a compact mode for chart dashboards (overviews).",
+      "Spreadsheet export column controls for authorized users.",
+      "XLSX data export for authorized users.",
+      "Better accessibility for visually-impaired users in the data catalogue.",
+    ],
+    otherFeatures: [
+      "Small fixes for the data catalogue.",
+      "Fixes for choropleth maps.",
+      "Translatable month-year bins in search and charts.",
+      "A new \"Admin\" link in the footer in place of the previous header \"Portal\" link.",
+      "Customizable default charts per chart section for deployers.",
+      "Various PCGL-specific improvements.",
+    ],
+  },
+  {
     version: 25,
-    status: "upcoming",
+    status: "released",
+    date: "2026-08-05",
     majorMilestones: [
       "Data Catalogue Design",
       "Enabled Summary Charts in the Data Catalogue",
@@ -19,7 +39,7 @@ const releases: ReleaseVersion[] = [
   },
   {
     version: 24,
-    status: "current",
+    status: "released",
     date: "2026-06-30",
     majorMilestones: [
       "Move faceted search to the sidebar on project–dataset pages, displaying counts next to each filter for instant context while searching.",

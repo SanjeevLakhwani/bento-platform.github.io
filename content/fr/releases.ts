@@ -2,8 +2,28 @@ import type { ReleaseVersion } from "../types";
 
 const releases: ReleaseVersion[] = [
   {
+    version: 26,
+    status: "current",
+    date: "2026-09-01",
+    majorMilestones: [
+      "Meilleure logique de disposition des graphiques et mode compact pour les tableaux de bord de graphiques (aperçus).",
+      "Contrôle des colonnes de l'exportation en tableur pour les utilisateurs autorisés.",
+      "Exportation de données au format XLSX pour les utilisateurs autorisés.",
+      "Meilleure accessibilité pour les utilisateurs malvoyants dans le catalogue de données.",
+    ],
+    otherFeatures: [
+      "Petits correctifs pour le catalogue de données.",
+      "Correctifs pour les cartes choroplèthes.",
+      "Intervalles mois-année traduisibles dans la recherche et les graphiques.",
+      "Un nouveau lien « Admin » dans le pied de page, remplaçant l'ancien lien « Portail » de l'en-tête.",
+      "Graphiques par défaut personnalisables par section de graphiques pour les responsables de déploiement.",
+      "Diverses améliorations propres au PCGL.",
+    ],
+  },
+  {
     version: 25,
-    status: "upcoming",
+    status: "released",
+    date: "2026-08-05",
     majorMilestones: [
       "Conception du catalogue de données",
       "Activation des graphiques sommaires dans le catalogue de données",
@@ -19,7 +39,7 @@ const releases: ReleaseVersion[] = [
   },
   {
     version: 24,
-    status: "current",
+    status: "released",
     date: "2026-06-30",
     majorMilestones: [
       "Déplacement de la recherche à facettes vers la barre latérale sur les pages projet–jeu de données, affichant les décomptes à côté de chaque filtre pour un contexte instantané pendant la recherche.",
