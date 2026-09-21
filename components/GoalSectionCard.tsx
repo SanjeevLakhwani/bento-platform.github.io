@@ -3,7 +3,7 @@ import type { GoalSection } from "@/content/types";
 
 export default function GoalSectionCard({ goal, index }: { goal: GoalSection; index: number }) {
   return (
-    <article className="rounded-2xl border border-border-soft bg-white p-6 sm:p-8">
+    <article className="rounded-2xl border border-border-soft bg-surface p-6 sm:p-8">
       <div className="flex items-start gap-4">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-soft text-sm font-bold text-brand">
           {index + 1}

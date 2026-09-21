@@ -27,11 +27,3 @@ export interface ReleaseVersion {
   majorMilestones: string[];
   otherFeatures?: string[];
 }
-
-export type RoadmapStatus = "upcoming" | "in-progress";
-
-export interface RoadmapItem {
-  version: number;
-  targetDate?: string;
-  milestones: string[];
-}

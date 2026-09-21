@@ -14,13 +14,12 @@ bento-platform.github.io/
 │       ├── page.tsx          # Home
 │       ├── goals/page.tsx
 │       ├── features/page.tsx
-│       ├── releases/page.tsx
-│       └── roadmap/page.tsx
+│       └── releases/page.tsx
 ├── components/                # shared UI (Header, Footer, cards, timelines, ...)
 ├── content/
 │   ├── types.ts               # shared content shapes
-│   ├── en/{goals,features,releases,roadmap}.ts
-│   └── fr/{goals,features,releases,roadmap}.ts
+│   ├── en/{goals,features,releases}.ts
+│   └── fr/{goals,features,releases}.ts
 ├── messages/{en,fr}.json      # UI chrome strings (nav, buttons, labels) for next-intl
 ├── i18n/                      # next-intl routing/config
 ├── lib/                       # site config + SEO metadata helpers
@@ -53,10 +52,6 @@ Edit `content/en/releases.ts` **and** `content/fr/releases.ts`:
 
 - Add the new version at the top of the array with `status: "current"`, and change the previous "current" entry to `status: "released"`.
 - Fill in `majorMilestones` / `otherFeatures`.
-
-### Roadmap
-
-Edit `content/en/roadmap.ts` and `content/fr/roadmap.ts` — remove the item once it ships (and add it to `releases.ts` instead), add new planned versions as needed.
 
 ### Goals / Features
 

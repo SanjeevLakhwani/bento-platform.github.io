@@ -4,7 +4,7 @@ import { siteUrl } from "@/lib/site-config";
 
 export const dynamic = "force-static";
 
-const pagePaths = ["", "goals", "features", "releases", "roadmap"];
+const pagePaths = ["", "goals", "features", "releases"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return pagePaths.map((path) => {

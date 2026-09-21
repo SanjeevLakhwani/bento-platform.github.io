@@ -21,7 +21,7 @@ export default function InlineText({ text }: { text: string }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-amber-800 underline decoration-amber-800/40 underline-offset-2 hover:decoration-amber-800"
+        className="text-brand underline decoration-brand/40 underline-offset-2 hover:decoration-brand"
       >
         {label}
       </a>,

@@ -1,18 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { githubOrgUrl, withBasePath } from "@/lib/site-config";
+import { githubOrgUrl } from "@/lib/site-config";
+import Logo from "@/components/Logo";
 
 const navItems = [
   { href: "/", key: "home" as const },
   { href: "/goals", key: "goals" as const },
   { href: "/features", key: "features" as const },
   { href: "/releases", key: "releases" as const },
-  { href: "/roadmap", key: "roadmap" as const },
 ];
 
 const localeLabels: Record<string, string> = { en: "EN", fr: "FR" };
@@ -27,14 +26,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-border-soft bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <Image
-            src={withBasePath("/images/bento-logo.png")}
-            alt="Bento Platform"
-            width={595}
-            height={147}
-            className="h-8 w-auto"
-            priority
-          />
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -63,7 +55,7 @@ export default function Header() {
                 locale={loc}
                 aria-current={loc === activeLocale ? "true" : undefined}
                 className={`rounded-full px-2 py-1 hover:bg-brand-soft hover:text-brand ${
-                  loc === activeLocale ? "bg-brand text-white" : "text-foreground/70"
+                  loc === activeLocale ? "bg-cta text-on-cta" : "text-foreground/70"
                 }`}
               >
                 {localeLabels[loc] ?? loc.toUpperCase()}
@@ -74,7 +66,7 @@ export default function Header() {
             href={githubOrgUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-brand px-4 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+            className="rounded-full bg-cta px-4 py-1.5 text-sm font-semibold text-on-cta transition-colors hover:bg-cta-hover"
           >
             {t("github")}
           </a>
@@ -121,7 +113,7 @@ export default function Header() {
                   href={pathname}
                   locale={loc}
                   className={`rounded-full border border-border-soft px-3 py-1 ${
-                    loc === activeLocale ? "bg-brand text-white" : ""
+                    loc === activeLocale ? "bg-cta text-on-cta" : ""
                   }`}
                 >
                   {localeLabels[loc] ?? loc.toUpperCase()}
@@ -132,7 +124,7 @@ export default function Header() {
               href={githubOrgUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-brand px-4 py-1.5 text-sm font-semibold text-white"
+              className="rounded-full bg-cta px-4 py-1.5 text-sm font-semibold text-on-cta"
             >
               {t("github")}
             </a>

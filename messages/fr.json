@@ -4,7 +4,6 @@
     "goals": "Objectifs",
     "features": "Fonctionnalités",
     "releases": "Versions",
-    "roadmap": "Feuille de route",
     "github": "GitHub"
   },
   "common": {
@@ -15,6 +14,7 @@
   "home": {
     "title": "Bento Platform",
     "tagline": "Une plateforme web à code source ouvert pour explorer et partager des données cliniques et -omiques.",
+    "heroImageAlt": "Aperçu du catalogue de données Bento : une barre de recherche, une fiche d'étude et des totaux d'études, d'échantillons et de participants.",
     "heroCta": "Voir le projet sur GitHub",
     "introEyebrow": "Introduction",
     "introHeading": "Une seule plateforme, conçue pour les données génomiques",
@@ -28,9 +28,7 @@
     "featuresCardTitle": "Fonctionnalités",
     "featuresCardDescription": "Un aperçu du tableau de bord public, du portail authentifié et de l'API Beacon.",
     "releasesCardTitle": "Versions",
-    "releasesCardDescription": "L'historique des versions et le contenu de chaque version de Bento.",
-    "roadmapCardTitle": "Feuille de route",
-    "roadmapCardDescription": "Ce qui est prévu pour la suite de la plateforme."
+    "releasesCardDescription": "L'historique des versions et le contenu de chaque version de Bento."
   },
   "goals": {
     "title": "Objectifs",
@@ -50,13 +48,6 @@
     "released": "Publiée",
     "majorMilestones": "Jalons majeurs",
     "otherFeatures": "Autres fonctionnalités",
-    "comingSoon": "À venir"
-  },
-  "roadmap": {
-    "title": "Feuille de route",
-    "description": "Ce qui est prévu pour la suite de la plateforme Bento.",
-    "eyebrow": "Prochaines étapes",
-    "target": "Cible",
     "comingSoon": "À venir"
   },
   "footer": {

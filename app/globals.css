@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfbf7;
-  --foreground: #211a12;
-  --brand: #8f550c;
-  --brand-dark: #6e4108;
-  --brand-soft: #fbf1e2;
-  --border-soft: #e9e0d2;
+  --background: #ffffff;
+  --foreground: #0f1b2d;
+  --brand: #146193;
+  --brand-dark: #0e4a70;
+  --brand-soft: #e8f2f9;
+  --border-soft: #d9e4ec;
+  --surface: #ffffff;
+  --cta: #146193;
+  --cta-hover: #0e4a70;
+  --on-cta: #ffffff;
 }
 
 @theme inline {
@@ -16,12 +20,23 @@
   --color-brand-dark: var(--brand-dark);
   --color-brand-soft: var(--brand-soft);
   --color-border-soft: var(--border-soft);
-  --font-sans: var(--font-inter);
+  --color-surface: var(--surface);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-on-cta: var(--on-cta);
+  --font-sans: var(--font-plex);
+  --font-display: var(--font-sora);
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
 }
 
 .prose-list {

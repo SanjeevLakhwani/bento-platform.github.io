@@ -18,7 +18,7 @@ export default function FeatureShowcase({ feature, index }: { feature: FeatureIt
     <article
       className={`flex flex-col items-center gap-8 lg:flex-row ${reversed ? "lg:flex-row-reverse" : ""}`}
     >
-      <div className="w-full overflow-hidden rounded-2xl border border-border-soft bg-white shadow-sm lg:w-3/5">
+      <div className="w-full overflow-hidden rounded-2xl border border-border-soft bg-surface shadow-sm lg:w-3/5">
         <Image
           src={withBasePath(feature.image)}
           alt={feature.alt}

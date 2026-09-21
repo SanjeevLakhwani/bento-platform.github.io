@@ -27,7 +27,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     { href: "/goals", title: t("goalsCardTitle"), description: t("goalsCardDescription") },
     { href: "/features", title: t("featuresCardTitle"), description: t("featuresCardDescription") },
     { href: "/releases", title: t("releasesCardTitle"), description: t("releasesCardDescription") },
-    { href: "/roadmap", title: t("roadmapCardTitle"), description: t("roadmapCardDescription") },
   ];
 
   const jsonLd = {
@@ -49,32 +48,43 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="border-b border-border-soft bg-brand-soft/40">
-        <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-20 text-center sm:px-6">
+      <section className="bg-brand text-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.05fr] lg:py-20">
+          <div className="flex flex-col items-start">
+            <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl">{t("tagline")}</h1>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <a
+                href={githubOrgUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand transition-colors hover:bg-brand-soft"
+              >
+                {t("heroCta")}
+              </a>
+              <a
+                href="#explore"
+                className="border-b border-white/50 pb-0.5 text-sm font-semibold text-white transition-colors hover:border-white"
+              >
+                {t("exploreHeading")} &rarr;
+              </a>
+            </div>
+          </div>
           <Image
-            src={withBasePath("/images/bento-logo.png")}
-            alt="Bento Platform"
-            width={595}
-            height={147}
-            className="h-16 w-auto sm:h-20"
+            src={withBasePath("/images/bento-hero-v2.png")}
+            alt={t("heroImageAlt")}
+            width={3194}
+            height={2870}
+            sizes="(min-width: 1024px) 640px, 100vw"
+            className="h-auto w-full"
             priority
           />
-          <p className="mt-6 w-full max-w-xl text-lg text-foreground/80 sm:text-xl">{t("tagline")}</p>
-          <a
-            href={githubOrgUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
-          >
-            {t("heroCta")}
-          </a>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand">{t("introEyebrow")}</p>
-        <h1 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight sm:text-3xl">{t("introHeading")}</h1>
-        <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-foreground/80">
+        <h2 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight sm:text-3xl">{t("introHeading")}</h2>
+        <div className="mt-8 grid gap-8 text-base leading-relaxed text-foreground/80 lg:grid-cols-3 lg:gap-12">
           <p>
             {t.rich("intro2", {
               ga4gh: (chunks) => (
@@ -94,11 +104,11 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      <section className="border-t border-border-soft bg-white">
+      <section id="explore" className="scroll-mt-20 border-t border-border-soft bg-brand-soft/50">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{t("exploreHeading")}</h2>
           <p className="mt-2 max-w-2xl text-foreground/70">{t("exploreDescription")}</p>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-3">
             {cards.map((card) => (
               <QuickLinkCard key={card.href} {...card} />
             ))}

@@ -12,5 +12,5 @@ export function withBasePath(path: string): string {
   return `${basePath}${path}`;
 }
 
-export const pagePaths = ["", "goals", "features", "releases", "roadmap"] as const;
+export const pagePaths = ["", "goals", "features", "releases"] as const;
 export type PagePath = (typeof pagePaths)[number];
