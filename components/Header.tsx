@@ -6,6 +6,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { githubOrgUrl } from "@/lib/site-config";
 import Logo from "@/components/Logo";
+import GithubIcon from "@/components/GithubIcon";
 
 const navItems = [
   { href: "/", key: "home" as const },
@@ -66,8 +67,9 @@ export default function Header() {
             href={githubOrgUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-cta px-4 py-1.5 text-sm font-semibold text-on-cta transition-colors hover:bg-cta-hover"
+            className="inline-flex items-center gap-2 rounded-full bg-cta px-4 py-1.5 text-sm font-semibold text-on-cta transition-colors hover:bg-cta-hover"
           >
+            <GithubIcon className="h-4 w-4" />
             {t("github")}
           </a>
         </div>
@@ -124,8 +126,9 @@ export default function Header() {
               href={githubOrgUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-cta px-4 py-1.5 text-sm font-semibold text-on-cta"
+              className="inline-flex items-center gap-2 rounded-full bg-cta px-4 py-1.5 text-sm font-semibold text-on-cta"
             >
+              <GithubIcon className="h-4 w-4" />
               {t("github")}
             </a>
           </div>
