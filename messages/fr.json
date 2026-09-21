@@ -16,6 +16,7 @@
     "tagline": "Une plateforme web à code source ouvert pour explorer et partager des données cliniques et -omiques.",
     "heroImageAlt": "Aperçu du catalogue de données Bento : une barre de recherche, une fiche d'étude et des totaux d'études, d'échantillons et de participants.",
     "heroCta": "Voir le projet sur GitHub",
+    "trustedBy": "Ils nous font confiance",
     "introEyebrow": "Introduction",
     "introHeading": "Une seule plateforme, conçue pour les données génomiques",
     "intro1": "Un besoin récurrent des projets en génomique concerne la mise en œuvre, le déploiement et la maintenance d'une plateforme permettant d'organiser leurs jeux de données. Les exigences sont essentiellement les mêmes : normaliser, ingérer, permettre l'interrogation et la récupération de données cliniques, expérimentales et multi-omiques.",

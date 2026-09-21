@@ -16,6 +16,7 @@
     "tagline": "An open-source web platform to explore and share clinical and -omics data.",
     "heroImageAlt": "Preview of the Bento data catalogue: a search box, a study card, and summary counts of studies, specimens and participants.",
     "heroCta": "View the project on GitHub",
+    "trustedBy": "Trusted by",
     "introEyebrow": "Introduction",
     "introHeading": "One platform, built for genomics data",
     "intro1": "A recurrent need for projects in genomics revolves around the implementation, deployment and maintenance of a platform to organize their datasets. The requirements are essentially the same: standardize, ingest, allow querying and retrieval of clinical, experiments and multi-omics data.",

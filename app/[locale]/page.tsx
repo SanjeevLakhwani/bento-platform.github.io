@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/metadata";
 import { githubOrgUrl, siteUrl, withBasePath } from "@/lib/site-config";
 import QuickLinkCard from "@/components/QuickLinkCard";
+import TrustedBy from "@/components/TrustedBy";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -80,6 +81,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           />
         </div>
       </section>
+
+      <TrustedBy />
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand">{t("introEyebrow")}</p>
