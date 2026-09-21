@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { withBasePath } from "@/lib/site-config";
 
-const partners: { src: string; alt: string; width: number; height: number; label?: string; href?: string }[] = [
+const partners: { src?: string; alt: string; width?: number; height?: number; label?: string; href?: string }[] = [
   {
     src: "/images/trusted-by/pan-canadian-genome-library.png",
     alt: "Pan-Canadian Genome Library",
@@ -28,10 +28,7 @@ const partners: { src: string; alt: string; width: number; height: number; label
     href: "https://rsrq.bento.sd4h.ca",
   },
   {
-    src: "/images/trusted-by/bearwatch.png",
     alt: "",
-    width: 512,
-    height: 486,
     label: "BearWatch NanuqKS",
     href: "https://bento.sclougheed.ca",
   },
@@ -40,13 +37,15 @@ const partners: { src: string; alt: string; width: number; height: number; label
 function PartnerLogo({ partner: p }: { partner: (typeof partners)[number] }) {
   return (
     <>
-      <Image
-        src={withBasePath(p.src)}
-        alt={p.alt}
-        width={p.width}
-        height={p.height}
-        className="h-14 w-auto mix-blend-multiply"
-      />
+      {p.src && (
+        <Image
+          src={withBasePath(p.src)}
+          alt={p.alt}
+          width={p.width}
+          height={p.height}
+          className="h-14 w-auto mix-blend-multiply"
+        />
+      )}
       {p.label && <span className="font-display text-2xl font-bold tracking-wide text-foreground">{p.label}</span>}
     </>
   );
@@ -63,7 +62,7 @@ export default function TrustedBy() {
         </h2>
         <ul className="mt-8 grid grid-cols-1 items-center justify-items-center gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {partners.map((p) => (
-            <li key={p.src}>
+            <li key={p.src ?? p.label}>
               {p.href ? (
                 <a
                   href={p.href}
