@@ -3,10 +3,10 @@ import type { FeatureItem } from "@/content/types";
 import { withBasePath } from "@/lib/site-config";
 
 const IMAGE_DIMENSIONS: Record<string, { width: number; height: number }> = {
-  "/images/bento_public1.png": { width: 1774, height: 988 },
-  "/images/bento_public2.png": { width: 1773, height: 980 },
-  "/images/bento_authenticated1.png": { width: 2445, height: 649 },
-  "/images/bento_authenticated2.png": { width: 2435, height: 1074 },
+  "/images/bento_catalogue.png": { width: 3024, height: 1612 },
+  "/images/bento_counts.png": { width: 2240, height: 1420 },
+  "/images/bento_exploration.png": { width: 2800, height: 1514 },
+  "/images/bento_queries.png": { width: 2800, height: 1514 },
   "/images/bento_beacon.png": { width: 1400, height: 926 },
 };
 
